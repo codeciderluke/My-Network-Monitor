@@ -9,6 +9,8 @@ through a polished dark-theme GUI.
 ![License](https://img.shields.io/badge/license-MIT-green)
 ![Platform](https://img.shields.io/badge/platform-Windows-0078d6)
 
+![My Network Monitor — live demo](docs/screenshot.png)
+
 > Scope: captures L3/L4 metadata for TCP, UDP, DNS, ICMP, IPv4, IPv6 and ARP.
 > It does **not** decrypt HTTPS content or block packets.
 
