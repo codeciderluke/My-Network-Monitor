@@ -1,0 +1,38 @@
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+.eggs/
+*.egg
+build/
+dist/
+*.spec.bak
+.venv/
+venv/
+.env
+
+# Tooling caches
+.mypy_cache/
+.ruff_cache/
+.pytest_cache/
+.coverage
+htmlcov/
+
+# App runtime artifacts
+logs/
+data/
+*.db
+*.db-wal
+*.db-shm
+*.pcap
+*.csv
+*.jsonl
+
+# OS / editor
+.idea/
+.vscode/
+.DS_Store
+Thumbs.db
+
+# Tooling / session
+.claude/
