@@ -16,9 +16,9 @@ from PySide6.QtWidgets import QApplication
 
 sys.path.insert(0, str(Path(__file__).resolve().parents[1] / "src"))
 
-from my_network_monitor.config import AppConfig  # noqa: E402
-from my_network_monitor.ui.main_window import MainWindow  # noqa: E402
-from my_network_monitor.ui.theme import load_stylesheet  # noqa: E402
+from my_network_monitor.config import AppConfig
+from my_network_monitor.ui.main_window import MainWindow
+from my_network_monitor.ui.theme import load_stylesheet
 
 _FONT_FILES = (
     "C:/Windows/Fonts/segoeui.ttf",
@@ -43,7 +43,7 @@ def main() -> int:
     window.show()
 
     def capture() -> None:
-        window._controller._emit_snapshot()  # noqa: SLF001
+        window._controller._emit_snapshot()
         app.processEvents()
         # Flush deferred widget deletions so rank lists don't overlap.
         app.sendPostedEvents(None, QEvent.Type.DeferredDelete)

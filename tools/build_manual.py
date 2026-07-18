@@ -101,11 +101,11 @@ def build_html() -> str:
         f'<span style="color:{ACCENT_LIGHT};font-size:30pt;font-weight:bold;">Network</span>'
         f'<span style="color:#e6edf3;font-size:30pt;font-weight:bold;"> Monitor</span><br/>'
         f'<span style="color:#8b98a9;font-size:13pt;">Real-time network traffic monitor '
-        f'for Windows</span><br/><br/>'
+        f"for Windows</span><br/><br/>"
         f'<span style="color:{ACCENT_LIGHT};font-size:12pt;">User Manual</span><br/>'
         f'<span style="color:#5c6773;font-size:10pt;">Version {__version__}</span><br/><br/>'
         f'<span style="color:#8b98a9;font-size:10pt;">Designed by Codecider Lab</span>'
-        f'</td></tr></table>'
+        f"</td></tr></table>"
     )
 
     # ---------- 1. Overview ----------
@@ -145,9 +145,7 @@ def build_html() -> str:
     parts.append(
         _p(
             "2. Install Npcap from "
-            '<span style="color:'
-            + ACCENT
-            + ';">https://npcap.com</span> and enable the '
+            '<span style="color:' + ACCENT + ';">https://npcap.com</span> and enable the '
             '"WinPcap API-compatible mode" option.'
         )
     )
@@ -176,12 +174,20 @@ def build_html() -> str:
     parts.append(
         _rows(
             [
-                ("Toolbar", "Interface selector, refresh, Start / Pause / Stop, SQLite toggle, "
-                            "live capture status."),
-                ("Summary panel (left)", "Download/upload speed, 60-second chart, protocol "
-                                         "statistics, top processes and destinations, alerts."),
-                ("Log table (right)", "Real-time per-packet log with color-coded direction and "
-                                      "protocol."),
+                (
+                    "Toolbar",
+                    "Interface selector, refresh, Start / Pause / Stop, SQLite toggle, "
+                    "live capture status.",
+                ),
+                (
+                    "Summary panel (left)",
+                    "Download/upload speed, 60-second chart, protocol "
+                    "statistics, top processes and destinations, alerts.",
+                ),
+                (
+                    "Log table (right)",
+                    "Real-time per-packet log with color-coded direction and protocol.",
+                ),
                 ("Filter bar", "Display filters applied to the visible log."),
                 ("Action bar", "Auto-scroll toggle, row copy, clear, CSV / JSONL export."),
                 ("Status bar", "Current status messages and the product credit."),
@@ -297,8 +303,11 @@ def build_html() -> str:
     parts.append(
         _rows(
             [
-                ("SQLite", "Enable the toolbar toggle to persist packets to a database "
-                           "(batched, non-blocking)."),
+                (
+                    "SQLite",
+                    "Enable the toolbar toggle to persist packets to a database "
+                    "(batched, non-blocking).",
+                ),
                 ("CSV", "Export the current log via the action bar."),
                 ("JSON Lines", "Export the current log as one JSON object per line."),
             ],
@@ -328,20 +337,27 @@ def build_html() -> str:
     parts.append(
         _rows(
             [
-                ("\"Npcap is not installed\"",
-                 "Install Npcap from npcap.com with WinPcap-compatible mode, then restart. "
-                 "Use --demo to preview without capture."),
-                ("No interfaces listed",
-                 "Run as Administrator and click the refresh button."),
-                ("Process names missing",
-                 "Some short-lived or privileged connections cannot be mapped; they show as "
-                 "empty."),
-                ("Dropped packets shown",
-                 "Traffic exceeded processing capacity; the app keeps running and reports the "
-                 "count."),
-                ("UI text looks garbled in console",
-                 "Console-only encoding issue (e.g. localized adapter names); the GUI and log "
-                 "file are correct."),
+                (
+                    '"Npcap is not installed"',
+                    "Install Npcap from npcap.com with WinPcap-compatible mode, then restart. "
+                    "Use --demo to preview without capture.",
+                ),
+                ("No interfaces listed", "Run as Administrator and click the refresh button."),
+                (
+                    "Process names missing",
+                    "Some short-lived or privileged connections cannot be mapped; they show as "
+                    "empty.",
+                ),
+                (
+                    "Dropped packets shown",
+                    "Traffic exceeded processing capacity; the app keeps running and reports the "
+                    "count.",
+                ),
+                (
+                    "UI text looks garbled in console",
+                    "Console-only encoding issue (e.g. localized adapter names); the GUI and log "
+                    "file are correct.",
+                ),
             ],
             "Symptom",
             "Resolution",
@@ -363,12 +379,12 @@ def build_html() -> str:
 
     parts.append(
         f'<p align="center" style="color:{MUTED};font-size:9pt;margin-top:24px;">'
-        f'My Network Monitor v{__version__} &nbsp;&middot;&nbsp; '
-        f'Designed by Codecider Lab</p>'
+        f"My Network Monitor v{__version__} &nbsp;&middot;&nbsp; "
+        f"Designed by Codecider Lab</p>"
     )
 
     return (
-        '<html><body style="font-family:\'Segoe UI\',sans-serif;font-size:10.5pt;">'
+        "<html><body style=\"font-family:'Segoe UI',sans-serif;font-size:10.5pt;\">"
         + "".join(parts)
         + "</body></html>"
     )
