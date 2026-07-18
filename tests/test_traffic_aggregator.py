@@ -1,8 +1,8 @@
 """Traffic aggregator tests."""
 
 from conftest import make_record
-from network_monitor.analysis.traffic_aggregator import TrafficAggregator
-from network_monitor.domain.packet_record import TrafficDirection
+from my_network_monitor.analysis.traffic_aggregator import TrafficAggregator
+from my_network_monitor.domain.packet_record import TrafficDirection
 
 
 def test_download_upload_rate() -> None:

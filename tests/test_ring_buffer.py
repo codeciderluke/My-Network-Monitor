@@ -1,6 +1,6 @@
 """Ring buffer tests."""
 
-from network_monitor.utils.ring_buffer import RingBuffer
+from my_network_monitor.utils.ring_buffer import RingBuffer
 
 
 def test_ring_buffer_respects_maxlen() -> None:

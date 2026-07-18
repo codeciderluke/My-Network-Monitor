@@ -1,4 +1,4 @@
-# Network Traffic Monitor
+# My Network Monitor
 
 A real-time network traffic monitor for Windows, built with Python 3.12 and
 PySide6. It captures, parses, aggregates, and stores L3/L4 traffic metadata
@@ -45,12 +45,12 @@ Or run it manually:
 python -m venv .venv
 .\.venv\Scripts\Activate.ps1
 pip install -r requirements.txt
-python -m network_monitor.main --demo
+python -m my_network_monitor.main --demo
 ```
 
 ## Documentation
 
-- [User Manual (PDF)](docs/NetworkTrafficMonitor_UserManual.pdf)
+- [User Manual (PDF)](docs/MyNetworkMonitor_UserManual.pdf)
 
 ## Architecture
 
@@ -77,7 +77,7 @@ pytest
 
 ```powershell
 pip install -e ".[build]"
-pyinstaller network-monitor.spec
+pyinstaller my-network-monitor.spec
 ```
 
 The standalone executable is produced in `dist/`. See

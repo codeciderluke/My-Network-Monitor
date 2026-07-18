@@ -1,6 +1,6 @@
 """Unit conversion and formatting tests."""
 
-from network_monitor.utils.formatters import format_port, format_rate, format_size
+from my_network_monitor.utils.formatters import format_port, format_rate, format_size
 
 
 def test_format_rate_bytes() -> None:

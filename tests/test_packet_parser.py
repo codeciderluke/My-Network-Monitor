@@ -8,8 +8,8 @@ import pytest
 
 scapy = pytest.importorskip("scapy.all")
 
-from network_monitor.analysis.packet_parser import PacketParser  # noqa: E402
-from network_monitor.domain.packet_record import TrafficDirection  # noqa: E402
+from my_network_monitor.analysis.packet_parser import PacketParser  # noqa: E402
+from my_network_monitor.domain.packet_record import TrafficDirection  # noqa: E402
 
 LOCAL_IP = "192.168.0.24"
 REMOTE_IP = "142.250.196.132"

@@ -1,6 +1,6 @@
 # Third-Party Licenses
 
-Network Traffic Monitor is released under the MIT License (see `LICENSE`).
+My Network Monitor is released under the MIT License (see `LICENSE`).
 It depends on the following third-party packages, each under its own license.
 
 | Package | License | Notes |

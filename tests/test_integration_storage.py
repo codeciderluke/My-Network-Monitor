@@ -6,9 +6,9 @@ import json
 from pathlib import Path
 
 from conftest import make_record
-from network_monitor.domain.packet_record import TrafficDirection
-from network_monitor.storage import database, export_service
-from network_monitor.storage.traffic_repository import TrafficRepository
+from my_network_monitor.domain.packet_record import TrafficDirection
+from my_network_monitor.storage import database, export_service
+from my_network_monitor.storage.traffic_repository import TrafficRepository
 
 
 def test_sqlite_batch_persist(tmp_path: Path) -> None:

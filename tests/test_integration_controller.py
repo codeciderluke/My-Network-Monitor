@@ -9,8 +9,8 @@ pytest.importorskip("PySide6.QtWidgets")
 from PySide6.QtTest import QTest
 from PySide6.QtWidgets import QApplication
 
-from network_monitor.config import AppConfig
-from network_monitor.ui.controllers.main_controller import MainController
+from my_network_monitor.config import AppConfig
+from my_network_monitor.ui.controllers.main_controller import MainController
 
 
 @pytest.fixture(scope="module")

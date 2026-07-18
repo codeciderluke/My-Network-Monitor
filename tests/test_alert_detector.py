@@ -2,9 +2,9 @@
 
 from datetime import datetime
 
-from network_monitor.analysis.alert_detector import AlertDetector
-from network_monitor.domain.alert import AlertSeverity
-from network_monitor.domain.traffic_snapshot import TrafficSnapshot
+from my_network_monitor.analysis.alert_detector import AlertDetector
+from my_network_monitor.domain.alert import AlertSeverity
+from my_network_monitor.domain.traffic_snapshot import TrafficSnapshot
 
 
 def test_high_upload_triggers_warning() -> None:

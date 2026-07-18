@@ -28,8 +28,8 @@ _FONT_FILES = (
 
 sys.path.insert(0, str(Path(__file__).resolve().parents[1] / "src"))
 
-from network_monitor import __version__  # noqa: E402
-from network_monitor.ui import icons  # noqa: E402
+from my_network_monitor import __version__  # noqa: E402
+from my_network_monitor.ui import icons  # noqa: E402
 
 ACCENT = "#0e7490"
 ACCENT_LIGHT = "#22d3ee"
@@ -97,8 +97,8 @@ def build_html() -> str:
         f'<table width="100%" cellpadding="0" cellspacing="0"><tr>'
         f'<td bgcolor="{BAND}" align="center" style="padding:60px 40px;">'
         f'<img src="mem://logo" width="96" height="96"/><br/>'
-        f'<span style="color:#e6edf3;font-size:30pt;font-weight:bold;">Network '
-        f'</span><span style="color:{ACCENT_LIGHT};font-size:30pt;font-weight:bold;">Traffic</span>'
+        f'<span style="color:#e6edf3;font-size:30pt;font-weight:bold;">My </span>'
+        f'<span style="color:{ACCENT_LIGHT};font-size:30pt;font-weight:bold;">Network</span>'
         f'<span style="color:#e6edf3;font-size:30pt;font-weight:bold;"> Monitor</span><br/>'
         f'<span style="color:#8b98a9;font-size:13pt;">Real-time network traffic monitor '
         f'for Windows</span><br/><br/>'
@@ -112,7 +112,7 @@ def build_html() -> str:
     parts.append(_bar("Overview", "1."))
     parts.append(
         _p(
-            "Network Traffic Monitor is a Windows desktop application that captures and "
+            "My Network Monitor is a Windows desktop application that captures and "
             "visualizes live network traffic in real time. The left panel shows an at-a-glance "
             "summary (speeds, chart, statistics, top talkers, alerts); the right panel shows a "
             "detailed, filterable packet log."
@@ -167,7 +167,7 @@ def build_html() -> str:
         )
     )
     parts.append(_p("You can also start it directly:"))
-    parts.append(_code("python -m network_monitor.main --demo"))
+    parts.append(_code("python -m my_network_monitor.main --demo"))
 
     parts.append(_pagebreak())
 
@@ -363,7 +363,7 @@ def build_html() -> str:
 
     parts.append(
         f'<p align="center" style="color:{MUTED};font-size:9pt;margin-top:24px;">'
-        f'Network Traffic Monitor v{__version__} &nbsp;&middot;&nbsp; '
+        f'My Network Monitor v{__version__} &nbsp;&middot;&nbsp; '
         f'Designed by Codecider Lab</p>'
     )
 
@@ -375,7 +375,7 @@ def build_html() -> str:
 
 
 def main() -> int:
-    default_out = Path("docs/NetworkTrafficMonitor_UserManual.pdf")
+    default_out = Path("docs/MyNetworkMonitor_UserManual.pdf")
     out = Path(sys.argv[1]) if len(sys.argv) > 1 else default_out
     out.parent.mkdir(parents=True, exist_ok=True)
     app = QApplication(sys.argv)  # noqa: F841 - required for text/font rendering
@@ -389,7 +389,7 @@ def main() -> int:
     writer.setPageSize(QPageSize(QPageSize.PageSizeId.A4))
     writer.setPageMargins(QMarginsF(16, 16, 16, 18), QPageLayout.Unit.Millimeter)
     writer.setResolution(200)
-    writer.setTitle("Network Traffic Monitor - User Manual")
+    writer.setTitle("My Network Monitor - User Manual")
 
     doc = QTextDocument()
     doc.setDefaultFont(QFont("Segoe UI", 11))

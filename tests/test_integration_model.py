@@ -7,9 +7,9 @@ import pytest
 pytest.importorskip("PySide6.QtCore")
 
 from conftest import make_record
-from network_monitor.ui.models.traffic_filter_proxy import TrafficFilterProxy
-from network_monitor.ui.models.traffic_table_model import TrafficTableModel
-from network_monitor.ui.widgets.traffic_filter_bar import FilterCriteria
+from my_network_monitor.ui.models.traffic_filter_proxy import TrafficFilterProxy
+from my_network_monitor.ui.models.traffic_table_model import TrafficTableModel
+from my_network_monitor.ui.widgets.traffic_filter_bar import FilterCriteria
 
 
 def test_batch_add_preserves_ring_buffer_limit() -> None:

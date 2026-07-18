@@ -7,7 +7,7 @@ import pytest
 pytest.importorskip("PySide6.QtCore")
 
 from conftest import make_record
-from network_monitor.ui.models.traffic_table_model import TrafficTableModel
+from my_network_monitor.ui.models.traffic_table_model import TrafficTableModel
 
 
 def test_append_records() -> None:

@@ -4,7 +4,7 @@ from __future__ import annotations
 
 from datetime import datetime
 
-from network_monitor.domain.packet_record import PacketRecord, TrafficDirection
+from my_network_monitor.domain.packet_record import PacketRecord, TrafficDirection
 
 
 def make_record(

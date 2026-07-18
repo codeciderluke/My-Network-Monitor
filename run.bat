@@ -4,7 +4,7 @@ setlocal enabledelayedexpansion
 cd /d "%~dp0"
 
 rem ============================================================
-rem  Network Traffic Monitor launch script (Codecider Lab)
+rem  My Network Monitor launch script (Codecider Lab)
 rem
 rem  Usage:
 rem    run.bat            Actual capture (auto-requests admin privileges, requires Npcap)
@@ -47,8 +47,8 @@ if not exist "%VENV_PY%" (
 )
 
 rem --- Run ---
-echo [run] Launching Network Traffic Monitor...
-"%VENV_PY%" -m network_monitor.main %*
+echo [run] Launching My Network Monitor...
+"%VENV_PY%" -m my_network_monitor.main %*
 set "EXIT_CODE=%ERRORLEVEL%"
 
 if not "%EXIT_CODE%"=="0" (

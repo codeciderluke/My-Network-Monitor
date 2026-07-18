@@ -12,13 +12,13 @@ import pytest
 
 pytest.importorskip("scapy.all")
 
-from network_monitor.analysis.connection_tracker import ConnectionTracker
-from network_monitor.analysis.packet_parser import PacketParser
-from network_monitor.analysis.process_resolver import ProcessResolver
-from network_monitor.analysis.traffic_aggregator import TrafficAggregator
-from network_monitor.capture.capture_service import CaptureService
-from network_monitor.capture.capture_worker import PacketPipeline
-from network_monitor.domain.packet_record import TrafficDirection
+from my_network_monitor.analysis.connection_tracker import ConnectionTracker
+from my_network_monitor.analysis.packet_parser import PacketParser
+from my_network_monitor.analysis.process_resolver import ProcessResolver
+from my_network_monitor.analysis.traffic_aggregator import TrafficAggregator
+from my_network_monitor.capture.capture_service import CaptureService
+from my_network_monitor.capture.capture_worker import PacketPipeline
+from my_network_monitor.domain.packet_record import TrafficDirection
 
 LOCAL_IP = "192.168.0.24"
 REMOTE_IP = "142.250.196.132"

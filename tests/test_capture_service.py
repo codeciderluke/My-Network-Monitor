@@ -6,8 +6,8 @@ import pytest
 
 pytest.importorskip("scapy.all")
 
-import network_monitor.capture.scapy_capture_service as svc_mod
-from network_monitor.capture.scapy_capture_service import (
+import my_network_monitor.capture.scapy_capture_service as svc_mod
+from my_network_monitor.capture.scapy_capture_service import (
     CaptureError,
     ScapyCaptureService,
     is_pcap_available,
